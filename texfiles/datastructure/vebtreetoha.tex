@@ -4,7 +4,7 @@
 \begin{document}
 
 \begin{frame}\frametitle{van Emde Boas tree とは}
-	van Emde Boas tree (以下vEB木)は有限な整数集合に対して,\\以下の操作が可能なデータ構造
+	van Emde Boas tree (以下vEB木)は動的集合に対して,\\空間計算量$O(u)$で以下の操作が可能なデータ構造
 \begin{block}{操作}
 \begin{description}
 \setlength{\labelwidth}{15ex}
@@ -21,7 +21,7 @@
 \begin{block}{}
 \structure{これらの操作が最悪時間計算量$O(\log\log u)$で実行可能\\}
 \end{block}
-{\small $u :=$ 保持できる要素の最大値}
+{\small $u :=$ 保持しうる要素の集合(全体集合)の大きさ}
 \end{frame}
 
 \end{document}

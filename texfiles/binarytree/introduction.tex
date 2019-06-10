@@ -2,8 +2,13 @@
 
 \begin{document}
 
-\begin{frame}\frametitle{binary-tree}
-各種操作を高速に実現するために
+\begin{frame}\frametitle{直接アドレス法}
+	空間計算量$O(u)$で動的集合を保持する手段として, \structure{直接アドレス法}を考える.\\
+\begin{block}{直接アドレス法}
+	要素の値を配列の添字として利用し, データを保持するテクニック
+\end{block}
+今回考えているデータ構造では付属データは持たないので, \\各配列の要素には要素を保持しているかをbitで格納する.
+\subfile{resources/bt-array.tex}
 \end{frame}
 
 \end{document}
