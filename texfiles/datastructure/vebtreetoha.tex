@@ -1,0 +1,28 @@
+\documentclass[main]{subfiles}
+
+\setcounter{section}{2}
+\begin{document}
+
+\section{van Emde Boas tree とは}
+\begin{frame}\frametitle{van Emde Boas tree とは}
+	van Emde Boas tree (以下vEB木)は有限な整数集合に対して,\\以下の操作が可能なデータ構造
+\begin{block}{操作}
+\begin{description}
+\setlength{\labelwidth}{15ex}
+\setlength{\itemindent}{8ex}
+\item[$\func{member}(e)$]		$e$が存在するかを返す\\
+\item[$\min()$]			要素の最小値を返す\\
+\item[$\max()$]			要素の最大値を返す\\
+\item[$\func{successor}(e)$]	$e$より大きい最小の要素を返す\\
+\item[$\func{predecessor}(e)$]	$e$より小さい最大の要素を返す\\
+\item[$\func{insert}(e)$]		$e$を挿入する\\
+\item[$\func{delete}(e)$]		$e$を削除する\\
+\end{description}
+\end{block}
+\begin{block}{}
+\structure{これらの操作が時間計算量$O(\log\log u)$で実行可能\\}
+\end{block}
+{\small $u :=$ 保持できる要素の最大値}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[dvipdfmx,12pt,notheorems]{beamer}
+\usepackage{tikz}
+\usetikzlibrary{calc,quotes,positioning,shapes,fit,arrows,backgrounds}
+%\pgfdeclarelayer{background}
+%\pgfsetlayers{background}
+%%%% 和文用 %%%%%
+\usepackage{bxdpx-beamer}
+\usepackage{pxjahyper}
+\usepackage{minijs}%和文用
+\usepackage{latexsym}
+\renewcommand{\kanjifamilydefault}{\gtdefault}%和文用
+
+%%%% スライドの見た目 %%%%%
+\usetheme{Madrid}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{frametitle}[default][center]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent=0}%好みに応じてどうぞ）
+\setbeamertemplate{footline}[page number]
+\setbeamerfont{footline}{size=\normalsize,series=\bfseries}
+\setbeamercolor{footline}{fg=black,bg=black}
+%%%%
+
+%%%% 定義環境 %%%%%
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{definition}{定義}
+\newtheorem{proposition}{命題}
+\newtheorem{lemma}{補題}
+\newtheorem{corollary}{系}
+\newtheorem{conjecture}{予想}
+\newtheorem*{remark}{Remark}
+\renewcommand{\proofname}{}
+%%%%%%%%%
+
+%%%%% フォント基本設定 %%%%%
+\usepackage[T1]{fontenc}%8bit フォント
+\usepackage{textcomp}%欧文フォントの追加
+\usepackage[utf8]{inputenc}%文字コードをUTF-8
+\usepackage{otf}%otfパッケージ
+\usepackage{txfonts}%数式・英文ローマン体を txfont にする
+\usepackage{bm}%数式太字
+%%%%%%%%%%
+
+%%%% ファイル環境 %%%%
+\usepackage{subfiles}
+%%%%%%%%
+
+\tikzset{%
+	a1/.style=,%
+	a2/.style=,%
+	a3/.style=,%
+	a4/.style=,%
+	a5/.style=,%
+}
+
+\newcommand{\func}[1]{\ensuremath\mathrm{#1}}
+\newcommand{\TRUE}{\text{\textsc{true}}}
+\newcommand{\FALSE}{\text{\textsc{false}}}
+
+\title[略タイトル]{van Emde Boas Trees}
+\author[Mitsuyoshi]{光吉　健汰}
+\institute[IKN]{北海道大学工学部 情報エレクトロニクス学科 情報理工学コース 4年\\
+情報知識ネットワーク研究室}
+\date{\today}%日付
+\begin{document}
+
+\begin{frame}\frametitle{}
+\titlepage
+\end{frame}
+
+\begin{frame}\frametitle{Contents}
+\tableofcontents
+\end{frame}
+
+\subfile{texfiles/introduction/introduction}
+\subfile{texfiles/datastructure/vebtreetoha}
+\subfile{texfiles/datastructure/func-member}
+\subfile{texfiles/datastructure/func-minmax}
+\subfile{texfiles/datastructure/func-suc}
+
+\end{document}
