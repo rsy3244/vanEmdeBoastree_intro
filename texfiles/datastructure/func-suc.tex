@@ -5,20 +5,19 @@
 
 \begin{frame}\frametitle{操作$\func{successor}(e)$, $\func{predecessor}(e)$}
 \begin{itemize}
-	\item $\func{successor}(e)$は, 集合の要素の最小値を返す.\\
-	\item $\func{predecessor}(e)$は, 集合の要素の最大値を返す.\\
+	\item $\func{successor}(e)$は, 集合の要素から$e$より大きい最小の値を返す.\\
+	\item $\func{predecessor}(e)$は, 集合の要素から$e$より小さい最大の値を返す.\\
 \end{itemize}
 
 \begin{columns}[c]
 	\begin{column}{0.5\linewidth}
-		\tikzset{
-			a4/.style={circle, fill=red!20},
-		}
 		\subfile{resources/intro-set}
 	\end{column}
 	\begin{column}{0.49\linewidth}
-		$\func{min}() = 2$\\
-		$\func{max}() = 11$\\
+		\begin{itemize}
+			\item $\func{successor}(2) = 3$\\
+			\item $\func{predecessor}(7) = 5$\\
+		\end{itemize}
 	\end{column}
 \end{columns}
 \end{frame}

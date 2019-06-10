@@ -1,0 +1,16 @@
+# Fdb version 3
+["dvipdf"] 0 "intro-set-inserted.dvi" "intro-set-inserted.pdf" "intro-set-inserted" 0
+  "intro-set-inserted.dvi" 0 -1 0 "latex"
+  (generated)
+  "intro-set-inserted.pdf"
+["latex"] 1560145426 "intro-set-inserted.tex" "intro-set-inserted.dvi" "intro-set-inserted" 1560145426
+  "/usr/local/texlive/2018/texmf-dist/tex/latex/subfiles/subfiles.cls" 1533070489 1565 4bb28a676b7c58be9698017c52bb4c67 ""
+  "/usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf" 1544742277 35176 ce7fee66be1fb01dfc6b702a7dbfa0ea ""
+  "/usr/local/texlive/2018/texmf-var/web2c/eptex/platex.fmt" 1554280325 4485152 8e0747ea48589f787d10ecf8aaececae ""
+  "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
+  "intro-set-inserted.aux" 1560143949 8 a94a2480d3289e625eea47cd1b285758 ""
+  "intro-set-inserted.tex" 1560145425 688 36ad8de7612c33dd0e738f816333ea2c ""
+  "main.tex" 0 -1 0 ""
+  (generated)
+  "intro-set-inserted.dvi"
+  "intro-set-inserted.log"

@@ -1,6 +1,6 @@
 \documentclass[dvipdfmx,12pt,notheorems]{beamer}
 \usepackage{tikz}
-\usetikzlibrary{calc,quotes,positioning,shapes,fit,arrows,backgrounds}
+\usetikzlibrary{calc,quotes,positioning,shapes,fit,arrows,backgrounds,tikzmark}
 %\pgfdeclarelayer{background}
 %\pgfsetlayers{background}
 %%%% 和文用 %%%%%
@@ -49,11 +49,12 @@
 %%%%%%%%
 
 \tikzset{%
-	a1/.style=,%
-	a2/.style=,%
-	a3/.style=,%
-	a4/.style=,%
-	a5/.style=,%
+	elem/.style={circle,minimum size=6mm},
+	a1/.style={elem},%
+	a2/.style={elem},%
+	a3/.style={elem},%
+	a4/.style={elem},%
+	a5/.style={elem},%
 }
 
 \newcommand{\func}[1]{\ensuremath\mathrm{#1}}
@@ -80,5 +81,7 @@
 \subfile{texfiles/datastructure/func-member}
 \subfile{texfiles/datastructure/func-minmax}
 \subfile{texfiles/datastructure/func-suc}
+\subfile{texfiles/datastructure/func-insert}
+\subfile{texfiles/datastructure/func-delete}
 
 \end{document}

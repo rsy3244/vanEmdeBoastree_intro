@@ -1,0 +1,9 @@
+PWD /Users/rsy/work/lab/nazoki/texfiles/datastructure
+INPUT /usr/local/texlive/2018/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-var/web2c/eptex/platex.fmt
+INPUT func-insert.tex
+OUTPUT func-insert.log
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/subfiles/subfiles.cls
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/subfiles/subfiles.cls

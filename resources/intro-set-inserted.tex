@@ -1,6 +1,10 @@
 \documentclass[main]{subfiles}
+\tikzset{
+	a6/.style={elem,fill=red!20},
+}
 \begin{document}
 \begin{figure}
+\caption{$S = \{2,3,5,\structure{6},8,11\}$}
 \begin{tikzpicture}[xscale=0.5]
 	%\node(a1) {2};
 	%\node(a2)[below =of a1] {3};
@@ -11,8 +15,9 @@
 	\node(a3)[a3] at (.5,-.8) {5};
 	\node(a4)[a4] at (-.3,-.1) {8};
 	\node(a5)[a5] at (-.8,-.8) {11};
+	\node(a6)[a6] at (-.6,.9) {6};
 	\begin{scope}[on background layer]
-		\node[fill=blue!20,draw=black,inner sep=0pt, thick, ellipse, fit=(a1) (a2) (a3) (a4) (a5)] {};
+		\node(setd)[fill=blue!20,draw=black,inner sep=0pt, thick, ellipse, fit=(a1) (a2) (a3) (a4) (a5) (a6)] {};
 	\end{scope}
 \end{tikzpicture}
 \end{figure}
