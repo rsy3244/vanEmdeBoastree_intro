@@ -19,6 +19,8 @@
 \setbeamertemplate{footline}[page number]
 \setbeamerfont{footline}{size=\normalsize,series=\bfseries}
 \setbeamercolor{footline}{fg=black,bg=black}
+\usepackage{multicol}
+\colorlet{mycolor}{orange!80!black}
 %%%%
 
 %%%% 定義環境 %%%%%
@@ -48,6 +50,23 @@
 \usepackage{subfiles}
 %%%%%%%%
 
+\AtBeginSection[]{
+  \setbeamercolor{section in toc shaded}{use=structure,fg=structure.fg}
+  \setbeamercolor{section in toc}{fg=mycolor}
+  \setbeamercolor{subsection in toc shaded}{fg=black}
+  \setbeamercolor{subsection in toc}{fg=mycolor}
+  \setbeamercolor{subsubsection in toc shaded}{fg=black}
+  \setbeamercolor{subsubsection in toc}{fg=mycolor}
+  \frame<beamer>{
+  \frametitle{Contents}
+  \tableofcontents[
+    sectionstyle=show/shaded,
+    subsectionstyle=show/show/shaded,
+    subsubsectionstyle=show/show/show/shaded
+    ]
+ }
+}
+
 \tikzset{%
 	elem/.style={circle,minimum size=6mm},
 	a1/.style={elem},%
@@ -72,16 +91,28 @@
 \titlepage
 \end{frame}
 
-\begin{frame}\frametitle{Contents}
-\tableofcontents
+\begin{frame}
+	\frametitle{Contents}
+	\tableofcontents[
+		%sectionstyle=show/shaded,
+		%subsectionstyle=show/show/shaded,
+		%subsubsectionstyle=show/show/show/shaded
+	]
 \end{frame}
 
+\section{自己紹介}
+%\frame{\tableofcontents[currentsection]}
 \subfile{texfiles/introduction/introduction}
+\section{van Emde Boas tree とは}
+%\frame{\tableofcontents[currentsection]}
 \subfile{texfiles/datastructure/vebtreetoha}
 \subfile{texfiles/datastructure/func-member}
 \subfile{texfiles/datastructure/func-minmax}
 \subfile{texfiles/datastructure/func-suc}
 \subfile{texfiles/datastructure/func-insert}
 \subfile{texfiles/datastructure/func-delete}
+\section{binary-tree}
+%\frame{\tableofcontents[currentsection]}
+\subfile{texfiles/binarytree/introduction}
 
 \end{document}

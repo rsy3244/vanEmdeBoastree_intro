@@ -1,2 +1,3 @@
-\beamer@sectionintoc {2}{自己紹介}{3}{0}{1}
-\beamer@sectionintoc {3}{van Emde Boas tree とは}{4}{0}{2}
+\beamer@sectionintoc {1}{自己紹介}{3}{0}{1}
+\beamer@sectionintoc {2}{van Emde Boas tree とは}{5}{0}{2}
+\beamer@sectionintoc {3}{binary-tree}{12}{0}{3}
