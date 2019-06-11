@@ -79,6 +79,19 @@
 \newcommand{\func}[1]{\ensuremath\mathrm{#1}}
 \newcommand{\TRUE}{\text{\textsc{true}}}
 \newcommand{\FALSE}{\text{\textsc{false}}}
+\newcommand{\uniqnum}[1]{
+	( \foreach \i in {1,2,...,#1} {\onslide*<\i>{\i}} / #1 )
+}
+\newcounter{Cntr}
+\newcommand{\putarray}[1]{
+	\setcounter{Cntr}{0}
+	\foreach \i in {#1}{ \node (a\the\value{Cntr}) at ({\the\value{Cntr}+.5},.5) {\i};
+		\node (idx\the\value{Cntr}) at ({\the\value{Cntr}+.5},-.2) {{\tiny\the\value{Cntr}}};
+		\addtocounter{Cntr}{1}
+	%	\node (idx\i) [above =of a\i] {{\i-1}};
+	}
+}
+
 
 \title[略タイトル]{van Emde Boas Trees}
 \author[Mitsuyoshi]{光吉　健汰}
