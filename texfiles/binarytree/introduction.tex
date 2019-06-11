@@ -4,7 +4,7 @@
 
 \begin{frame}\frametitle{直接アドレス法\uniqnum{2}}
 	空間計算量$O(u)$で動的集合を保持する手段として, \structure{直接アドレス法}を考える.\\
-\begin{minipage}[c][.6\textheight][c]{\linewidth}
+\begin{minipage}[t][.5\textheight][c]{\linewidth}
 \onslide*<1>{
 \begin{block}{直接アドレス法}
 	要素の値を配列の添字として利用し, データを保持するテクニック
@@ -12,10 +12,14 @@
 今回考えているデータ構造では付属データは持たないので, \\各配列の要素には要素を保持しているかをbitで格納する.
 }
 \onslide*<2>{
+	$\func{member}(e)$, $\func{insert}(e)$, $\func{delete}(e)$ は, 
+	
 	
 }
 \end{minipage}
+\begin{minipage}[c][.2\textheight][c]{\linewidth}
 \subfile{resources/bt-array.tex}
+\end{minipage}
 \end{frame}
 
 \end{document}

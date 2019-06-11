@@ -3,26 +3,40 @@
 \setcounter{section}{2}
 \begin{document}
 
-\begin{frame}\frametitle{van Emde Boas tree とは}
-	van Emde Boas tree (以下vEB木)は動的集合に対して,\\空間計算量$O(u)$で後述するk各種操作が可能なデータ構造
+\begin{frame}\frametitle{van Emde Boas tree とは\uniqnum{2}}
+	van Emde Boas tree (以下vEB木)は\structure{動的集合}を扱うデータ構造
+\onslide*<1>{
+	\begin{block}{動的集合}
+		動的集合とは, 集合に対して後述の各種操作が行えるようなデータ構造
+	\end{block}
+	\begin{itemize}
+		\item 今回扱う要素は\structure{非負整数}とする\\
+		\item vEB木が保持しうる要素の集合を\structure{全体集合$U$}とし, \\
+			その大きさを\structure{$u$}とする
+		\item vEB木が現在保持している集合を\structure{$V$}とし, \\
+			その大きさを\structure{$n$}とする
+	\end{itemize}
+	
+}
 \onslide*<2>{
-\begin{block}{操作}
-\begin{description}
-\setlength{\labelwidth}{15ex}
-\setlength{\itemindent}{8ex}
-\item[$\func{member}(e)$]		$e$が存在するかを返す\\
-\item[$\min()$]			要素の最小値を返す\\
-\item[$\max()$]			要素の最大値を返す\\
-\item[$\func{successor}(e)$]	$e$より大きい最小の要素を返す\\
-\item[$\func{predecessor}(e)$]	$e$より小さい最大の要素を返す\\
-\item[$\func{insert}(e)$]		$e$を挿入する\\
-\item[$\func{delete}(e)$]		$e$を削除する\\
-\end{description}
-\end{block}
-\begin{block}{}
-\structure{これらの操作が最悪時間計算量$O(\log\log u)$で実行可能\\}
-\end{block}
-{\small $u :=$ 保持しうる要素の集合(全体集合)の大きさ}
+	\begin{block}{操作}
+		\begin{description}
+		\setlength{\labelwidth}{16ex}
+		\setlength{\itemindent}{8ex}
+		%ここよろし？
+		\item[$\Member(V,x)$]		$V$に$x$が存在するかを返す\\
+		\item[$\Min(V)$]			$V$の要素の最小値を返す\\
+		\item[$\Max(V)$]			$V$の要素の最大値を返す\\
+		\item[$\Successor(V,x)$]	$V$の$x$より大きい最小の要素を返す\\
+		\item[$\Predecessor(V,x)$]	$V$の$x$より小さい最大の要素を返す\\
+		\item[$\Insert(V,x)$]		$V$に$x$を挿入する\\
+		\item[$\Delete(V,x)$]		$V$から$x$を削除する\\
+		\end{description}
+	\end{block}
+	\begin{block}{}
+		\structure{これらの操作が最悪時間計算量$O(\log\log u)$で実行可能\\}
+	\end{block}
+}
 \end{frame}
 
 \end{document}

@@ -68,7 +68,7 @@
 }
 
 \tikzset{%
-	elem/.style={circle,minimum size=6mm},
+	elem/.style={circle,inner sep=0pt,minimum size=6mm},
 	a1/.style={elem},%
 	a2/.style={elem},%
 	a3/.style={elem},%
@@ -77,15 +77,23 @@
 }
 
 \newcommand{\func}[1]{\ensuremath\mathrm{#1}}
+\newcommand{\Min}{\func{\text{M\textsc{in}}}}
+\newcommand{\Max}{\func{\text{M\textsc{ax}}}}
+\newcommand{\Member}{\func{\text{M\textsc{ember}}}}
+\newcommand{\Successor}{\func{\text{S\textsc{uccessor}}}}
+\newcommand{\Predecessor}{\func{\text{P\textsc{redecessor}}}}
+\newcommand{\Insert}{\func{\text{I\textsc{nsert}}}}
+\newcommand{\Delete}{\func{\text{D\textsc{elete}}}}
 \newcommand{\TRUE}{\text{\textsc{true}}}
 \newcommand{\FALSE}{\text{\textsc{false}}}
 \newcommand{\uniqnum}[1]{
-	( \foreach \i in {1,2,...,#1} {\onslide*<\i>{\i}} / #1 )
+	(\foreach \i in {1,2,...,#1} {\onslide*<\i>{\i}}/#1)
 }
 \newcounter{Cntr}
 \newcommand{\putarray}[1]{
 	\setcounter{Cntr}{0}
-	\foreach \i in {#1}{ \node (a\the\value{Cntr}) at ({\the\value{Cntr}+.5},.5) {\i};
+	\foreach \i in {#1} {
+		\node (a\the\value{Cntr}) at ({\the\value{Cntr}+.5},.5) {\i};
 		\node (idx\the\value{Cntr}) at ({\the\value{Cntr}+.5},-.2) {{\tiny\the\value{Cntr}}};
 		\addtocounter{Cntr}{1}
 	%	\node (idx\i) [above =of a\i] {{\i-1}};
