@@ -26,7 +26,7 @@
 					child { node {$0$} }
 					child { node {$0$} }
 				}
-				child { node {$1$}
+				child { node {$1$} 
 					child { node {$1$} }
 					child { node {$1$} }
 				}
@@ -64,6 +64,10 @@
 				}
 			}
 		};
+		\draw[->,red,thick] (a) to (a-1);
+		\draw[->,red,thick] (a-1) to (a-1-1);
+		\draw[->,red,thick] (a-1-1) to (a-1-1-2);
+		\draw[->,red,thick] (a-1-1-2) to (a-1-1-2-1);
 
 \end{tikzpicture}
 \caption{$V = \{2,3,5,8,11\}$}
