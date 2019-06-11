@@ -4,22 +4,32 @@
 
 \begin{frame}\frametitle{直接アドレス法\uniqnum{2}}
 	空間計算量$O(u)$で動的集合を保持する手段として, \structure{直接アドレス法}を考える.\\
-\begin{minipage}[t][.5\textheight][c]{\linewidth}
+\begin{minipage}[t][.4\textheight][c]{\linewidth}
 \onslide*<1>{
 \begin{block}{直接アドレス法}
 	要素の値を配列の添字として利用し, データを保持するテクニック
 \end{block}
 今回考えているデータ構造では付属データは持たないので, \\各配列の要素には要素を保持しているかをbitで格納する.
 }
-\onslide*<2>{
-	$\func{member}(e)$, $\func{insert}(e)$, $\func{delete}(e)$ は, 
-	
-	
+\onslide*<2->{
+	\begin{itemize}
+		\item $\Member(V,x)$, $\Insert(V,x)$, $\Delete(V,x)$ の処理は, 配列のランダムアクセスが定数時間であるので, 時間計算量\structure{$O(1)$}. \\
+		\item $\Successor(V,x)$の処理は, $x$の次の値からbitが立っている\\要素まで\\最悪$\Theta(u)$回探索する必要があるので, 時間計算量\alert{$\Theta(u)$}.
+			\begin{itemize}
+				\item $\Predecessor(V,x)$, $\Min(V)$, $\Max(V)$も同様の処理を行うため, \\時間計算量$\Theta(u)$.
+			\end{itemize}
+	\end{itemize}
 }
 \end{minipage}
-\begin{minipage}[c][.2\textheight][c]{\linewidth}
+\begin{minipage}[c][.3\textheight][c]{\linewidth}
 \subfile{resources/bt-array.tex}
 \end{minipage}
+\onslide*<2>{
+\begin{tikzpicture}[overlay, remember picture]
+	%\node [ellipse callout,draw,callout absolute pointer=(5.5,2.4)](clo) at (3, 5) {$Successor(V,5)$のときの探索};
+	\draw[->, thick, red] (4.75,2.33) to [bend right=-45] (5.25,2.33)%
+		to [bend right=-45] (5.75,2.33) to [bend right=-45] (6.25,2.33);
+\end{tikzpicture}
+}
 \end{frame}
-
 \end{document}

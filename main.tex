@@ -93,8 +93,8 @@
 \newcommand{\putarray}[1]{
 	\setcounter{Cntr}{0}
 	\foreach \i in {#1} {
-		\node (a\the\value{Cntr}) at ({\the\value{Cntr}+.5},.5) {\i};
-		\node (idx\the\value{Cntr}) at ({\the\value{Cntr}+.5},-.2) {{\tiny\the\value{Cntr}}};
+		\node (a\the\value{Cntr}) at ({\the\value{Cntr}+.5},.5) {$\i$};
+		\node (idx\the\value{Cntr}) at ({\the\value{Cntr}+.5},-.2) {{\tiny$\the\value{Cntr}$}};
 		\addtocounter{Cntr}{1}
 	%	\node (idx\i) [above =of a\i] {{\i-1}};
 	}
@@ -135,5 +135,6 @@
 \section{binary-tree}
 %\frame{\tableofcontents[currentsection]}
 \subfile{texfiles/binarytree/introduction}
+\subfile{texfiles/binarytree/binarytree}
 
 \end{document}

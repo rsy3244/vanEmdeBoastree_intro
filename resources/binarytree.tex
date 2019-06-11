@@ -1,0 +1,72 @@
+\documentclass[main]{subfiles}
+\begin{document}
+\begin{figure}
+\begin{tikzpicture}[scale=0.5,
+		level 1/.style={
+			sibling distance=16em,
+			nodes={circle,inner sep=1pt, draw=black, fill=blue!20, minimum size=4mm}
+		},
+		level 2/.style={
+			sibling distance=8em,
+			nodes={circle,inner sep=1pt, draw=black, fill=blue!20, minimum size=4mm}
+		},
+		level 3/.style={
+			sibling distance=4em,
+			nodes={circle,inner sep=1pt, draw=black, fill=blue!20, minimum size=4mm}
+		},
+		level 4/.style={
+			sibling distance=2em,
+			nodes={rectangle,inner sep=1pt, draw=black, fill=blue!20, minimum size=4mm}
+		},
+	]
+	\node [circle, inner sep=1pt, draw=black, fill=blue!20, minimum size=4mm] (a){$1$}
+		child { node {$1$}
+			child { node {$1$}
+				child { node {$0$}
+					child { node {$0$} }
+					child { node {$0$} }
+				}
+				child { node {$1$}
+					child { node {$1$} }
+					child { node {$1$} }
+				}
+			}
+			child { node {$1$}
+				child { node {$1$}
+					child { node {$0$} }
+					child { node {$1$} }
+				}
+				child { node {$0$}
+					child { node {$0$} }
+					child { node {$0$} }
+				}
+			}
+		}
+		child { node {$1$}
+			child { node {$1$}
+				child { node {$1$}
+					child { node {$1$} }
+					child { node {$0$} }
+				}
+				child { node {$1$}
+					child { node {$0$} }
+					child { node {$1$} }
+				}
+			}
+			child { node {$0$}
+				child { node {$0$}
+					child { node {$0$} }
+					child { node {$0$} }
+				}
+				child { node {$0$}
+					child { node {$0$} }
+					child { node {$0$} }
+				}
+			}
+		};
+
+\end{tikzpicture}
+\caption{$V = \{2,3,5,8,11\}$}
+\end{figure}
+\end{document}
+

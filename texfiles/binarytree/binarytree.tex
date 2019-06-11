@@ -1,0 +1,28 @@
+\documentclass[main]{subfiles}
+
+\begin{document}
+
+\begin{frame}\frametitle{二分木構造\uniqnum{1}}
+$Successor(V,x)$で必要な探索回数を小さくするために,\\ 配列の各要素を葉とした\structure{二分木構造}を考える.\\
+\onslide*<1>{
+\begin{block}{二分木}
+	二分木とは, 葉ではない頂点の子が常に2個であるような木
+	\begin{description}
+		\setlength{\labelwidth}{8ex}
+		\item[木] 閉路を持たない, 連結なグラフ\\
+		\item[根] 木の頂点のうちの1つに定義する\\
+		\item[子] ある頂点について, 隣接する頂点のうち根から遠いもの\\
+		\item[葉] 木の頂点のうち, 子を持たないもの\\
+	\end{description}
+\end{block}
+}
+\onslide*<2>{
+	葉ではない各頂点には, 子の値の論理和を格納する.
+	\subfile{resources/binarytree}
+}
+
+
+
+\end{frame}
+
+\end{document}
