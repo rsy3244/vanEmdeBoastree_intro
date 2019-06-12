@@ -2,13 +2,15 @@
 
 \begin{document}
 
-\begin{frame}\frametitle{二分木構造 操作{\small $\Successor(V,x), \Predecessor(V,x)$}}
+\begin{frame}\frametitle{二分木構造 操作{\small $\Successor(V,x), \Predecessor(V,x)$}\uniqnum{2}}
 \begin{itemize}
 \item $\Successor(V,x)$は, $x$の親から, 自身が直前の頂点が左の子かつ右の子のbitが立っている頂点になるまで親を辿り, \\右の子の最小値を返す. 
+\begin{itemize}
+\item $\Predecessor(V,x)$も同様に処理する.
 \end{itemize}
 \begin{columns}[t]
 \begin{column}{0.45\linewidth}\subfile{code/bt-suc} \end{column}
-\begin{column}{0.54\linewidth}\subfile{resources/bt-min} \end{column}
+\begin{column}{0.54\linewidth}\subfile{resources/bt-suc} \end{column}
 \end{columns}
 
 \end{frame}

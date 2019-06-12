@@ -15,7 +15,7 @@
 	- [ ] binary-tree
 		- [x] 表現方法
 		- [x] Min, Max のアルゴリズム
-		- [ ] Successor, Predecessor のアルゴリズム
+		- [x] Successor, Predecessor のアルゴリズム
 		- [ ] Insert のアルゴリズム
 		- [ ] Delete のアルゴリズム
 	- [ ] 高速化のアイデア
