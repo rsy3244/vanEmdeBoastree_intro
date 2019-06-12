@@ -2,9 +2,12 @@
 
 \begin{document}
 
-\begin{frame}\frametitle{二分木構造 操作$\Min(V,x)$}
+\begin{frame}\frametitle{二分木構造 操作$\Min(V)$, $\Max(V)$}
 \begin{itemize}
-\item $\Min(V,x)$は, 根から左の子が$1$であれば左の子へ, そうでなければ右の子へ降りる操作を再帰的に行う.
+\item $\Min(V)$は, 根から左の子が$1$であれば左の子へ, そうでなければ右の子へ降りる操作を再帰的に行う.
+\begin{itemize}
+	\item $\Max(V)$も同様に処理する.
+\end{itemize}
 \end{itemize}
 \subfile{resources/bt-min}
 
