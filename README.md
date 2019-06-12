@@ -10,10 +10,10 @@
 - [x] データ構造の紹介
 	- [x] 操作の説明  
 - [ ] Binary tree
-	- [ ] 直接アドレス法
+	- [x] 直接アドレス法
 	- [ ] binary-tree
-		- [ ] 表現方法
-		- [ ] Min, Max のアルゴリズム
+		- [x] 表現方法
+		- [x] Min, Max のアルゴリズム
 		- [ ] Successor, Predecessor のアルゴリズム
 		- [ ] Insert のアルゴリズム
 		- [ ] Delete のアルゴリズム
