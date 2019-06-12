@@ -17,8 +17,12 @@ $Successor(V,x)$で必要な探索回数を小さくするために,\\ 配列の
 \end{block}
 }
 \onslide*<2>{
-	葉ではない各頂点には, 子の値の論理和を格納する.\\
-	そのため, ある頂点のbitが立っている場合, \\その頂点の下にある葉の\structure{少なくとも1頂点はbitが立っている}.\\
+	\begin{itemize}
+	\item 葉ではない各頂点には, 子の値の論理和を格納する.\\
+	\item ある頂点のbitが立っている場合, \\その頂点の下にある葉の\structure{少なくとも$1$頂点はbitが立っている}.\\
+	\item 各頂点は$2$個の子を持つことから, \\深さ毎に配列で保持することで各頂点に\structure{ランダムアクセスが可能}となる.\\
+	\end{itemize}
+
 	\subfile{resources/binarytree}
 }
 
