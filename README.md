@@ -2,6 +2,7 @@
 
 # TODO
 - [ ] \structureの色設定  
+- [ ] 配列の図を, 平方分割木の記述に直す
 - [x] 引数の\alert位置調整  
 - [ ] 図表の見出し位置調整&amp;ナンバリング  
 - [ ] 擬似コード小さくない？
@@ -12,13 +13,15 @@
 	- [x] 操作の説明  
 - [ ] Binary tree
 	- [x] 直接アドレス法
-	- [ ] binary-tree
+	- [x] binary-tree
 		- [x] 表現方法
 		- [x] Min, Max のアルゴリズム
 		- [x] Successor, Predecessor のアルゴリズム
-		- [ ] Insert のアルゴリズム
-		- [ ] Delete のアルゴリズム
-	- [ ] 高速化のアイデア
+		- [x] Insert のアルゴリズム
+		- [x] Delete のアルゴリズム
+		- [x] 計算量
+	- [ ] 平方分割木
+		- [x] 高速化のアイデア
 		- [ ] Min, Max のアルゴリズム
 		- [ ] Successor, Predecessor のアルゴリズム
 		- [ ] Insert のアルゴリズム

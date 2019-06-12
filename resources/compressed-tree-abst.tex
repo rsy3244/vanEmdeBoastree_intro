@@ -1,0 +1,27 @@
+\documentclass[main]{subfiles}
+\begin{document}
+\begin{figure}
+\begin{tikzpicture}[scale=0.65,
+		level 1/.style={
+			sibling distance=6em, level distance=9em,
+			nodes={circle,inner sep=1pt, draw=black, fill=blue!20, minimum size=4mm}
+		},
+		level 2/.style={
+			sibling distance=6em, level distance=3em,
+			nodes={circle,inner sep=1pt, draw=black, fill=blue!20, minimum size=4mm}
+		},
+		daen/.style={
+			ellipse, inner sep=1pt, draw=black, fill=blue!20, minimum height=4mm, minimum width=2em
+		},
+	]
+	\node at (0,1.3) {};
+	\node [daen] at(0,0){ }
+		child { node[daen] { } }
+		child { node[daen] { } }
+		child { node[daen] { } }
+		child { node[daen] { } };
+
+\end{tikzpicture}
+\end{figure}
+\end{document}
+

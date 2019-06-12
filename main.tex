@@ -101,11 +101,11 @@
 	(\foreach \i in {1,2,...,#1} {\onslide*<\i>{\i}}/#1)
 }
 \newcounter{Cntr}
-\newcommand{\putarray}[1]{
-	\setcounter{Cntr}{0}
-	\foreach \i in {#1} {
-		\node (a\the\value{Cntr}) at ({\the\value{Cntr}+.5},.5) {$\i$};
-		\node (idx\the\value{Cntr}) at ({\the\value{Cntr}+.5},-.2) {{\tiny$\the\value{Cntr}$}};
+\newcommand{\putarray}[2][0]{
+	\setcounter{Cntr}{#1}
+	\foreach \i in {#2} {
+		\node (a\the\value{Cntr}) at ({\the\value{Cntr}-#1+.5},.5) {$\i$};
+		\node (idx\the\value{Cntr}) at ({\the\value{Cntr}-#1+.5},-.25) {{\tiny$\the\value{Cntr}$}};
 		\addtocounter{Cntr}{1}
 	%	\node (idx\i) [above =of a\i] {{\i-1}};
 	}
@@ -133,10 +133,8 @@
 \end{frame}
 
 \section{自己紹介}
-%\frame{\tableofcontents[currentsection]}
 \subfile{texfiles/introduction/introduction}
 \section{van Emde Boas tree とは}
-%\frame{\tableofcontents[currentsection]}
 \subfile{texfiles/datastructure/vebtreetoha}
 \subfile{texfiles/datastructure/func-member}
 \subfile{texfiles/datastructure/func-minmax}
@@ -144,11 +142,13 @@
 \subfile{texfiles/datastructure/func-insert}
 \subfile{texfiles/datastructure/func-delete}
 \section{binary-tree}
-%\frame{\tableofcontents[currentsection]}
 \subfile{texfiles/binarytree/introduction}
 \subfile{texfiles/binarytree/binarytree}
 \subfile{texfiles/binarytree/func-min}
 \subfile{texfiles/binarytree/func-suc}
 \subfile{texfiles/binarytree/func-member}
+\subfile{texfiles/binarytree/runningtime}
+\subfile{texfiles/binarytree/refined}
+\subfile{texfiles/binarytree/comp-tree}
 
 \end{document}

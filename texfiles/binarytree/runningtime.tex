@@ -1,0 +1,16 @@
+\documentclass[main]{subfiles}
+
+\begin{document}
+
+\begin{frame}\frametitle{二分木構造 計算量\uniqnum{3}}
+	\begin{itemize}
+		\onslide*<1>{\item $\Min(V)$, $\Max(V)$ では, 根から最小値となる葉まで頂点を\\探索するので, 時間計算量は\structure{$\Theta(\log u)$}となる.}
+		\onslide*<2>{\item $\Successor(V,x)$, $\Predecessor(V,x)$では, 葉から最悪根まで辿り, \\ $\Min(V')$ (または$\Max(V')$) を行うことから, \\ 時間計算量は\structure{$O(\log u)$}となる.}
+		\onslide*<3>{\item $\Member(V,x)$, $\Insert(V,x)$, $\Delete(V,x)$ では, \\対応する葉にアクセスし, 値を取得する, \\もしくは更新するので, 時間計算量は\structure{$O(1)$}となる.}
+	\end{itemize}
+	\onslide*<1>{\subfile{resources/bt-min-p} }
+	\onslide*<2>{\subfile{resources/bt-suc-p} }
+	\onslide*<3>{\subfile{resources/bt-member} }
+\end{frame}
+
+\end{document}

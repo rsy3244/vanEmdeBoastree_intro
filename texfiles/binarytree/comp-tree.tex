@@ -1,0 +1,19 @@
+\documentclass[main]{subfiles}
+
+\begin{document}
+
+\begin{frame}\frametitle{平方分割木}
+木の高さを\structure{$\log \log u$} とした\structure{平方分割木} を考える.
+\begin{block}{平方分割木}
+	平方分割木とは, 葉を$\sqrt{u}$個持ち, 全てが根と隣接する, \\以下のような特徴を持つデータ構造である.\\
+	\begin{itemize}
+	\item 要素の全体集合の大きさ$u$を$u = 2^{2k} (k \in \mathbb{Z}^{+})$ とする.\\
+	\item 配列を$\sqrt{u}$個に分割し, それぞれを\structure{$cluster$}とする.\\
+	\item 根は大きさ$\sqrt{u}$の配列を持ち (これを\structure{$summary$}とする) ,\\ それぞれの要素は各$cluster$の要素の論理和を保持する.
+	\end{itemize}
+\end{block}
+\subfile{resources/sqrt-tree}
+
+\end{frame}
+
+\end{document}

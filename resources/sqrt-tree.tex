@@ -1,0 +1,32 @@
+\documentclass[main]{subfiles}
+\begin{document}
+\begin{figure}
+\begin{tikzpicture}[scale=0.5]
+	%\draw (0,0) grid (16,1);
+	\putarray{0,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0}
+	\setcounter{Cntr}{0}
+	\foreach \i in {1,1,1,0} {
+		\node (r\the\value{Cntr}) at ({\the\value{Cntr}+6.5},2.5) {$\i$};
+		\node [above =-.1 of r\the\value{Cntr}] (rdx\the\value{Cntr}) {{\tiny$\the\value{Cntr}$}};
+		\addtocounter{Cntr}{1}%
+	}
+	\draw [thick] (a0.north west) rectangle (a15.south east);
+	\foreach \i in {0,1,...,14} {
+		\draw (a\i.north east) to (a\i.south east);
+	}
+	\draw (r0.north west) rectangle (r3.south east);
+	\foreach \i in {0,1,2} {
+		\draw (r\i.north east) to (r\i.south east);
+	}
+	\draw (r0.south) to (a1.north east);
+	\draw (r1.south) to (a5.north east);
+	\draw (r2.south) to (a9.north east);
+	\draw (r3.south) to (a13.north east);
+	\draw [thick](a4.north west) to (a4.south west);
+	\draw [thick](a8.north west) to (a8.south west);
+	\draw [thick](a12.north west) to (a12.south west);
+\end{tikzpicture}
+\caption{$V = \{2,3,5,8,11\}$}
+\end{figure}
+\end{document}
+
