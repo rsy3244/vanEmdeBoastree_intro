@@ -1,0 +1,21 @@
+\documentclass[main]{subfiles}
+\begin{document}
+\begin{algorithm}[H]
+\caption{$\Successor(V,x)$}
+\begin{algorithmic}
+	\scriptsize
+	\State $prev \gets x$の頂点
+	\State $v \gets prev.parent$
+	\While{$v \neq root$}
+		\If{$v.value = 1\, and$\\$v.left = prev\, and\, v.right.value = 1$}
+		\State \Return $\Min(v.right\text{を根とした二分木})$
+		\Else
+			\State $prev = v$
+			\State $v = v.parent$
+		\EndIf
+	\EndWhile
+	\State \Return $NIL$
+\end{algorithmic}
+\end{algorithm}
+\end{document}
+

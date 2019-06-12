@@ -1,0 +1,29 @@
+\documentclass[main]{subfiles}
+\begin{document}
+\begin{algorithm}[H]
+\caption{$\Min(V)$}
+\begin{algorithmic}[1]
+\scriptsize
+\Require
+\Statex	$root$ 二分木の根
+\Statex	$v.left$ 頂点$v$の左の子(右は$v.right$)
+\Statex $v.parent$ 頂点$v$の親
+\Statex $v.value$ 頂点$v$の値
+\Function{$\Min$}{$V$}
+	\State $v \gets root$
+	\If{$v.value = 0$}
+		\State \Return $\NIL$
+	\EndIf
+	\While{$v.left \neq \NIL$}
+		\If{$v.left.value = 1$}
+			\State $v \gets v.left$
+		\Else
+			\State $v \gets v.right$
+		\EndIf
+	\EndWhile
+\EndFunction
+		
+\end{algorithmic}
+\end{algorithm}
+\end{document}
+

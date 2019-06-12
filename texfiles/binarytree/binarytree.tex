@@ -3,21 +3,22 @@
 \begin{document}
 
 \begin{frame}\frametitle{二分木構造\uniqnum{2}}
-$Successor(V,x)$で必要な探索回数を小さくするために,\\ 配列の各要素を葉とした\onslide*<1>{\structure{二分木構造}}\onslide*<2->{二分木構造}を考える.\\
+$Successor(V,x)$で必要な探索回数を小さくするために,\\ 配列の各要素を葉とした\onslide*<1>{\structure{二分木構造}}\onslide*<2->{二分木構造}を考える.\\\vspace{1em}
 \onslide*<1>{
 \begin{block}{二分木}
 	二分木とは, 葉ではない頂点の子が常に2個であるような木
-	\begin{description}
-		\setlength{\labelwidth}{8ex}
+	\begin{description}[木]
 		\item[木] 閉路を持たない, 連結なグラフ\\
 		\item[根] 木の頂点のうちの1つに定義する\\
 		\item[子] ある頂点について, 隣接する頂点のうち根から遠いもの\\
+		\item[親] ある頂点について, 隣接する頂点のうち根に近いもの\\
 		\item[葉] 木の頂点のうち, 子を持たないもの\\
 	\end{description}
 \end{block}
 }
 \onslide*<2>{
-	葉ではない各頂点には, 子の値の論理和を格納する.
+	葉ではない各頂点には, 子の値の論理和を格納する.\\
+	そのため, ある頂点のbitが立っている場合, \\その頂点の下にある葉の\structure{少なくとも1頂点はbitが立っている}.\\
 	\subfile{resources/binarytree}
 }
 

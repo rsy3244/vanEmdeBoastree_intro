@@ -46,6 +46,16 @@
 \usepackage{bm}%数式太字
 %%%%%%%%%%
 
+%%%% 擬似コードパッケージ %%%%
+\usepackage{algorithmicx}
+\usepackage[ruled]{algorithm}
+\usepackage{algpseudocode}
+\makeatletter
+\algtext*{EndWhile}
+\algtext*{EndIf}
+\makeatother
+%%%%%%%%
+
 %%%% ファイル環境 %%%%
 \usepackage{subfiles}
 %%%%%%%%
@@ -86,6 +96,7 @@
 \newcommand{\Delete}{\func{\text{D\textsc{elete}}}}
 \newcommand{\TRUE}{\text{\textsc{true}}}
 \newcommand{\FALSE}{\text{\textsc{false}}}
+\newcommand{\NIL}{\text{\textsc{nil}}}
 \newcommand{\uniqnum}[1]{
 	(\foreach \i in {1,2,...,#1} {\onslide*<\i>{\i}}/#1)
 }
@@ -137,5 +148,6 @@
 \subfile{texfiles/binarytree/introduction}
 \subfile{texfiles/binarytree/binarytree}
 \subfile{texfiles/binarytree/func-min}
+\subfile{texfiles/binarytree/func-suc}
 
 \end{document}
