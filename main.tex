@@ -54,6 +54,17 @@
 \algtext*{EndWhile}
 \algtext*{EndIf}
 \makeatother
+%%%% 条件文での改行を許す %%%%
+\newcommand\CONDITION[2]%
+	{\begin{tabular}[t]{@{}l@{}l@{}}
+			#1&#2
+		\end{tabular}%
+	}
+\algdef{SE}[IF]{If}{EndIf}[1]%
+	{\algorithmicif\ \CONDITION{#1}{\ \algorithmicthen}}%
+	{\algorithmicend\ \algorithmicif}%
+\algdef{C}[IF]{IF}{ElsIf}[1]%
+	{\algorithmicelse\ \algorithmicif\ \CONDITION{#1}{\ \algorithmicthen}}
 %%%%%%%%
 
 %%%% ファイル環境 %%%%

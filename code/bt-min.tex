@@ -5,24 +5,21 @@
 \begin{algorithmic}[1]
 \scriptsize
 \Require
-\Statex	$root$ 二分木の根
-\Statex	$v.left$ 頂点$v$の左の子(右は$v.right$)
-\Statex $v.parent$ 頂点$v$の親
-\Statex $v.value$ 頂点$v$の値
+	\Statex	$V :=$ 二分木を格納した配列
+	\Statex $u :=$ 全体集合の大きさ
 \Function{$\Min$}{$V$}
-	\State $v \gets root$
-	\If{$v.value = 0$}
-		\State \Return $\NIL$
-	\EndIf
-	\While{$v.left \neq \NIL$}
-		\If{$v.left.value = 1$}
-			\State $v \gets v.left$
+	\State $i \gets 1$
+	\While{$i < u$}
+		\If{V[$2\times i + 1$] = 1}
+			\State $i \gets 2\times i + 1$
+		\ElsIf{V[$2 \times i + 2$] = 1}
+			\State $i \gets 2\times i + 2$
 		\Else
-			\State $v \gets v.right$
+			\State \Return $\NIL$
 		\EndIf
 	\EndWhile
+	\State \Return $i - u$
 \EndFunction
-		
 \end{algorithmic}
 \end{algorithm}
 \end{document}

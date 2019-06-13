@@ -2,19 +2,22 @@
 \begin{document}
 \begin{algorithm}[H]
 \caption{$\Successor(V,x)$}
-\begin{algorithmic}
-	\scriptsize
-	\State $prev \gets x$の頂点
-	\State $v \gets prev.parent$
+\begin{algorithmic}[1]
+\scriptsize
+\Function{$\Successor$}{$V,x$}
+	\State $i \gets (x + u)/2$
+	\State $prev \gets x + u$
 	\While{$v \neq root$}
-		\If{$v.value = 1\, and$\\$v.left = prev\, and\, v.right.value = 1$}
-		\State \Return $\Min(v.right\text{を根とした二分木})$
+	\If{$V[i] = 1\, and \, prev \neq \text{\textsc{odd}}$\\
+	$and\, V[2\times i + 2] = 1$}
+		\State $\Min(V)$と同様の処理
 		\Else
 			\State $prev = v$
 			\State $v = v.parent$
 		\EndIf
 	\EndWhile
 	\State \Return $NIL$
+\EndFunction
 \end{algorithmic}
 \end{algorithm}
 \end{document}
