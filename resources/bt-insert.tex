@@ -26,7 +26,7 @@
 					child { node {$0$} }
 					child { node {$0$} }
 				}
-				child { node {$1$} 
+				child { node {$1$}
 					child { node {$1$} }
 					child { node {$1$} }
 				}
@@ -64,14 +64,6 @@
 				}
 			}
 		};
-		\draw[->,red,thick] (a-1-2-1-2) to (a-1-2-1);
-		\draw[->,red,thick] (a-1-2-1) to (a-1-2);
-		\draw[->,red,thick] (a-1-2) to (a-1);
-		\draw[->,red,thick] (a-1) to (a);
-		\draw[->,red,thick] (a) to (a-2);
-		\draw[->,red,thick] (a-2) to (a-2-1);
-		\draw[->,red,thick] (a-2-1) to (a-2-1-1);
-		\draw[->,red,thick] (a-2-1-1) to (a-2-1-1-1);
 			\node at ($(a.south)+(0,-.2)$) {{\tiny 1}};
 			\node at ($(a-1.south)+(0,-.2)$) {{\tiny 2}};
 			\node at ($(a-2.south)+(0,-.2)$) {{\tiny 3}};
@@ -103,10 +95,16 @@
 			\node at ($(a-2-2-1-2.south)+(0,-.2)$) {{\tiny 29}};
 			\node at ($(a-2-2-2-1.south)+(0,-.2)$) {{\tiny 30}};
 			\node at ($(a-2-2-2-2.south)+(0,-.2)$) {{\tiny 31}};
+		\onslide*<2->{\node[rectangle,inner sep=1pt,draw=red, fill=red!20,minimum size=4mm] at (a-2-2-1-1) {1};}
+		\onslide*<3->{\node[circle,inner sep=1pt,draw=red, fill=red!20,minimum size=4mm] at (a-2-2-1) {1};}
+		\onslide*<4->{\node[circle,inner sep=1pt,draw=red, fill=red!20,minimum size=4mm] at (a-2-2) {1};}
+		\onslide*<5->{\node[circle,inner sep=1pt,draw=red, fill=red!20,minimum size=4mm] at (a-2) {1};}
+		\onslide*<6->{\node[circle,inner sep=1pt,draw=red, fill=red!20,minimum size=4mm] at (a) {1};}
+		
 
 \end{tikzpicture}
 }
-\caption{$\Successor(V,5), V = \{2,3,5,8,11\}$}
+\caption{$\Insert(V,12), V = \{2,3,5,8,11\}$}
 \end{figure}
 \end{document}
 

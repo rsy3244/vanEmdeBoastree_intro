@@ -7,7 +7,7 @@
 	van Emde Boas tree (以下vEB木)は\structure{動的集合}を扱うデータ構造
 \onslide*<1>{
 	\begin{block}{動的集合}
-		動的集合とは, 集合に対して後述の各種操作が行えるようなデータ構造
+		動的集合とは, 集合に対して後述の$\Member(V,x)$, $\Insert(V,x)$, $\Delete(V,x)$が行えるようなデータ構造
 	\end{block}
 	\begin{itemize}
 		\item 今回扱う要素は\structure{非負整数}とする\\
@@ -34,7 +34,7 @@
 		\end{description}
 	\end{block}
 	\begin{block}{}
-		\structure{これらの操作が最悪時間計算量$O(\log\log u)$で実行可能\\}
+		vEB木では,これらの操作が最悪時間計算量\structure{$O(\log\log u)$で実行可能\\}
 	\end{block}
 }
 \end{frame}

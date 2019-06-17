@@ -8,15 +8,23 @@
 	\item $\Successor(V,x)$は, 集合$V$の要素から$x$より大きい最小の値を返す.\\
 	\item $\Predecessor(V,x)$は, 集合$V$の要素から$x$より小さい最大の値を返す.\\
 \end{itemize}
+\begin{tikzpicture}[overlay, remember picture]
+	\node[fill=red!20,rectangle, minimum size=1em] at ($(pic cs:Sucval) + (.1,.1)$) {};
+	\node[fill=green!20,rectangle, minimum size=1em] at ($(pic cs:Preval) + (.1,.1)$) {};
+\end{tikzpicture}
 
 \begin{columns}[c]
 	\begin{column}{0.5\linewidth}
+		\tikzset{
+			a2/.style={elem, fill=red!20},
+			a3/.style={elem, fill=green!20},
+		}
 		\subfile{resources/intro-set}
 	\end{column}
 	\begin{column}{0.49\linewidth}
 		\begin{itemize}
-			\item $\Successor(V,2) = 3$\\
-			\item $\Predecessor(V,7) = 5$\\
+			\item $\Successor(V,2) = \tikzmark{Sucval}3$\\
+			\item $\Predecessor(V,7) = \tikzmark{Preval}5$\\
 		\end{itemize}
 	\end{column}
 \end{columns}

@@ -98,7 +98,7 @@ $S = { 0, 2, 5, 7}$
 \end{frame}
 
 \section{Segment Tree}
-\begin{frame}\frametitle{まずは時間計算量$O(\log u)$を目指す}
+\begin{frame}\frametitle{まずは最悪時間計算量$O(\log u)$を目指す}
 \begin{itemize}
 \item クエリ, 点更新を$O(\log u)$で行いたい
 \item Segment Treeを使おう！
@@ -247,8 +247,8 @@ $S = { 0, 2, 5, 7}$
 \begin{itemize}
 \item \structure{空間計算量}
 \par \hspace{1em} 葉の数は$u$個なので, ノードの合計数は$2u$個\\よって空間計算量は$O(u)$
-\item \structure{時間計算量}
-\par \hspace{1em} いずれの操作も, 1つのノードでの処理は$O(1)$\\どの操作も高々木の高さ($logu$)の2倍程度の数のノードに対し, 処理を行う, よって時間計算量は$O(2logu) = O(logu)$
+\item \structure{最悪時間計算量}
+\par \hspace{1em} いずれの操作も, 1つのノードでの処理は$O(1)$\\どの操作も高々木の高さ($logu$)の2倍程度の数のノードに対し, 処理を行う, よって最悪時間計算量は$O(2logu) = O(logu)$
 \end{itemize}
 \end{frame}
 

@@ -1,6 +1,6 @@
 \documentclass[dvipdfmx,12pt,notheorems]{beamer}
 \usepackage{tikz}
-\usetikzlibrary{calc,quotes,positioning,shapes,fit,arrows,backgrounds,tikzmark}
+\usetikzlibrary{calc,decorations.pathreplacing,quotes,positioning,shapes,fit,arrows,backgrounds,tikzmark}
 %\pgfdeclarelayer{background}
 %\pgfsetlayers{background}
 %%%% 和文用 %%%%%
@@ -51,8 +51,6 @@
 \usepackage[ruled]{algorithm}
 \usepackage{algpseudocode}
 \makeatletter
-\algtext*{EndWhile}
-\algtext*{EndIf}
 \makeatother
 %%%% 条件文での改行を許す %%%%
 \newcommand\CONDITION[2]%
@@ -66,6 +64,8 @@
 \algdef{C}[IF]{IF}{ElsIf}[1]%
 	{\algorithmicelse\ \algorithmicif\ \CONDITION{#1}{\ \algorithmicthen}}
 %%%%%%%%
+\algtext*{EndWhile}
+\algtext*{EndIf}
 
 %%%% ファイル環境 %%%%
 \usepackage{subfiles}
@@ -158,8 +158,17 @@
 \subfile{texfiles/binarytree/func-min}
 \subfile{texfiles/binarytree/func-suc}
 \subfile{texfiles/binarytree/func-member}
+\subfile{texfiles/binarytree/func-insert}
+\subfile{texfiles/binarytree/func-delete}
 \subfile{texfiles/binarytree/runningtime}
 \subfile{texfiles/binarytree/refined}
 \subfile{texfiles/binarytree/comp-tree}
+\subfile{texfiles/binarytree/sqrt-min}
+\subfile{texfiles/binarytree/sqrt-suc}
+\subfile{texfiles/binarytree/sqrt-member}
+\subfile{texfiles/binarytree/sqrt-insert}
+\subfile{texfiles/binarytree/sqrt-delete}
+\subfile{texfiles/binarytree/sqrt-runningtime}
+\subfile{texfiles/binarytree/matome}
 
 \end{document}

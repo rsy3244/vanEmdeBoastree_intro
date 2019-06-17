@@ -1,0 +1,16 @@
+\documentclass[main]{subfiles}
+
+\begin{document}
+
+\begin{frame}\frametitle{二分木構造 操作$\Delete(V,x)$\uniqnum{5}}
+\begin{itemize}
+\item $\Delete(V,x)$は, 対応する葉の値を$0$にし親の頂点に遷移し, \\以下の操作を繰り返す.
+\begin{itemize} \item 子が両方$0$ならば, 自身の値を$0$にし, 親の頂点に遷移する. \end{itemize}
+\end{itemize}
+\begin{columns}[t]
+\begin{column}{0.45\linewidth} \subfile{code/bt-delete} \end{column}
+\begin{column}{0.54\linewidth} \subfile{resources/bt-delete} \end{column}
+\end{columns}
+
+\end{frame}
+\end{document}

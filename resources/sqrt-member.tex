@@ -1,12 +1,13 @@
+
 \documentclass[main]{subfiles}
 \begin{document}
-\begin{figure}\resizebox{.6\textwidth}{!}{%
+\begin{figure}\resizebox{.99\textwidth}{!}{
 \begin{tikzpicture}[scale=0.5]
 	%\draw (0,0) grid (16,1);
 	\putarray{0,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0}
 	\setcounter{Cntr}{0}
 	\foreach \i in {1,1,1,0} {
-		\node (r\the\value{Cntr}) at ({\the\value{Cntr}+6.5},3) {$\i$};
+		\node (r\the\value{Cntr}) at ({\the\value{Cntr}+6.5},2.5) {$\i$};
 		\node [above =-.1 of r\the\value{Cntr}] (rdx\the\value{Cntr}) {{\tiny$\the\value{Cntr}$}};
 		\addtocounter{Cntr}{1}%
 	}
@@ -25,15 +26,12 @@
 	\draw [thick](a4.north west) to (a4.south west);
 	\draw [thick](a8.north west) to (a8.south west);
 	\draw [thick](a12.north west) to (a12.south west);
-	\foreach \i in {0,4,8,12} {
-		\pgfmathtruncatemacro{\j}{\i+3};
-		\draw[thick, decorate, decoration={brace,amplitude=.3cm}] (a\i.north west) -- (a\j.north east) node [black, midway, yshift=.5cm] {{\scriptsize $\structure{cluster}$}};
-	}
-	\node (summ) at ($(r3.east)+(2,.3)$) {{\scriptsize $\structure{summary}$}};
-	\draw [->] (summ) to (r3.east);
+
+	\node[fill=red!20,rectangle] at (a7) {$0$};
+
 \end{tikzpicture}
 }
-\caption{$V = \{2,3,5,8,11\}$}
+\caption{$\Member(V,7), V = \{2,3,5,8,11\}$}
 \end{figure}
 \end{document}
 

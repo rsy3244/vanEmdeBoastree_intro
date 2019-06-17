@@ -8,7 +8,10 @@
 	\item $\Min(V)$は, 集合$V$の要素の最小値を返す.\\
 	\item $\Max(V)$は, 集合$V$の要素の最大値を返す.\\
 \end{itemize}
-
+\begin{tikzpicture}[overlay, remember picture]
+	\node[fill=red!20,rectangle, minimum size=1em] at ($(pic cs:Minval) + (.1,.1)$) {};
+	\node[fill=green!20,rectangle, minimum size=1em] at ($(pic cs:Maxval) + (.2,.1)$) {};
+\end{tikzpicture}
 \begin{columns}[c]
 	\begin{column}{0.5\linewidth}
 		\tikzset{
@@ -19,10 +22,11 @@
 	\end{column}
 	\begin{column}{0.49\linewidth}
 		\begin{itemize}
-			\item $\Min(V) = 2$\\
-			\item $\Max(V) = 11$\\
+			\item $\Min(V) = \tikzmark{Minval}2$\\
+			\item $\Max(V) = \tikzmark{Maxval}11$\\
 		\end{itemize}
 	\end{column}
 \end{columns}
+
 \end{frame}
 \end{document}

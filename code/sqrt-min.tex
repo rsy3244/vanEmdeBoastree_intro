@@ -1,0 +1,23 @@
+\documentclass[main]{subfiles}
+\begin{document}
+\begin{algorithm}[H]
+\caption{$\Min(V)$}
+\begin{algorithmic}[1]
+\scriptsize
+\Require
+	\Statex $A :=$ 葉の各要素に対応した配列 
+	\Statex ($\sqrt{u}$個に分割したものが$cluster$)
+\Function{$\Min$}{$V$}
+	\State $i \gets 0$
+	\While{$i < \sqrt{u}$\\ $ and\, summary[i] \neq 1$}
+		\State $i \gets i+1$
+	\EndWhile
+	\State $j \gets 0$
+	\While{$j < \sqrt{u}$\\ $ and\, A[i \times \sqrt{u} + j] \neq 1$}
+		\State $j \gets j+1$
+	\EndWhile
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+\end{document}
+

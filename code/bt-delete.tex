@@ -1,0 +1,17 @@
+\documentclass[main]{subfiles}
+\begin{document}
+\begin{algorithm}[H]
+\caption{$\Delete(V,x)$}
+\begin{algorithmic}[1]
+\scriptsize
+\Function{$\Delete$}{$V,x$}
+	\State $i \gets (x + u)/2$
+	\While{$V[i]$の子の値が両方とも$0$}
+		\State $V[i] \gets 0$
+		\State $i \gets \frac{i}{2}$
+	\EndWhile
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+\end{document}
+

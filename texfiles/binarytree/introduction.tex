@@ -14,9 +14,9 @@
 \onslide*<2->{
 	\begin{itemize}
 		\item $\Member(V,x)$, $\Insert(V,x)$, $\Delete(V,x)$ の処理は, 配列のランダムアクセスが定数時間であるので, 時間計算量\structure{$O(1)$}. \\
-		\item $\Successor(V,x)$の処理は, $x$の次の値からbitが立っている\\要素まで\\最悪$\Theta(u)$回探索する必要があるので, 時間計算量\alert{$\O(u)$}.
+		\item $\Successor(V,x)$の処理は, $x$の次の値からbitが立っている\\要素まで最悪$\Theta(u)$回探索する必要があるので, 時間計算量\alert{$O(u)$}.
 			\begin{itemize}
-				\item $\Predecessor(V,x)$, $\Min(V)$, $\Max(V)$も同様の処理を行うため, \\時間計算量$\O(u)$.
+				\item $\Predecessor(V,x)$, $\Min(V)$, $\Max(V)$も同様の処理を行うため, \\時間計算量$O(u)$.
 			\end{itemize}
 	\end{itemize}
 }

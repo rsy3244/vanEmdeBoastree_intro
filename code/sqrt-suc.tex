@@ -1,0 +1,29 @@
+\documentclass[main]{subfiles}
+\begin{document}
+\begin{algorithm}[H]
+\caption{{\small $\Successor(V,x)$}}
+\begin{algorithmic}[1]
+\scriptsize
+\Function{$\Successor$}{$V,x$}
+	\State $i \gets x$
+	\While{$i < (1 +\frac{x}{\sqrt{u}}) \times \sqrt{u}$}
+		\If{$A[i] = 1$}
+			\State \Return $i$
+		\EndIf
+	\EndWhile
+	\State $j \gets \frac{x}{\sqrt{u}}$
+	\While{$summary[j] \neq 1\, and \,j < \sqrt{u}$}
+		\State $j \gets j+1$
+	\EndWhile
+	\State $i \gets j \times \sqrt{u}$
+	\While{$i < (1 + j) \times \sqrt{u}$}
+		\If{$A[i] = 1$}
+			\State \Return $i$
+		\EndIf
+	\EndWhile
+	\State \Return \NIL
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+\end{document}
+
