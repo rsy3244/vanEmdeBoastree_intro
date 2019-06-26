@@ -2,13 +2,13 @@
 
 \begin{document}
 
-\begin{frame}\frametitle{平方分割木構造 計算量\uniqnum{4}}
+\begin{frame}\frametitle{平方分割木構造: 計算量\uniqnum{4}}
 	\begin{itemize}
-		\onslide*<1>{\item $\Min(V)$, $\Max(V)$ では, $summary$と, $cluster$$1$つを線形探索するので, 時間計算量は\alert{$O(\sqrt{u})$}となる.}
-		\onslide*<1>{\item $\Successor(V,x)$, $\Predecessor(V,x)$も$\Min(V)$と同様に時間計算量は\alert{$O(\sqrt{u})$}となる.}
+		\onslide*<1>{\item $\Min(V)$, $\Max(V)$ では, $summary$と, $cluster$$1$つを線形探索するので, 時間計算量は\alert{$O(\sqrt{u} )$}となる.}
+		\onslide*<1>{\item $\Successor(V,x)$, $\Predecessor(V,x)$も$\Min(V)$と同様に時間計算量は\alert{$O(\sqrt{u} )$}となる.}
 		\onslide*<2>{\item $\Member(V,x)$では, \\対応する$cluster$の要素を取得すればよいので, 時間計算量は\structure{$O(1)$}となる.}
 		\onslide*<3>{\item $\Insert(V,x)$では, \\対応する$cluster$, $summary$の要素を更新すればよいので, 時間計算量は\structure{$O(1)$}となる.}
-		\onslide*<4>{\item $\Delete(V,x)$では, 対応する$cluster$を線形探索するので, 時間計算量は\alert{$O(\sqrt{u})$}となる.}
+		\onslide*<4>{\item $\Delete(V,x)$では, 対応する$cluster$を線形探索するので, 時間計算量は\alert{$O(\sqrt{u} )$}となる.}
 	\end{itemize}
 	\onslide*<1>{\subfile{resources/sqrt-min-p} }
 	\onslide*<2>{\subfile{resources/sqrt-member} }

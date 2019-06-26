@@ -12,6 +12,10 @@
 		\addtocounter{Cntr}{1}%
 	}
 	\draw [thick] (a0.north west) rectangle (a15.south east);
+	\begin{scope}[on background layer]
+		\draw [fill=blue!10] (a0.north west) rectangle (a3.south east);
+		\draw [fill=blue!10] (a8.north west) rectangle (a11.south east);
+	\end{scope}
 	\foreach \i in {0,1,...,14} {
 		\draw (a\i.north east) to (a\i.south east);
 	}

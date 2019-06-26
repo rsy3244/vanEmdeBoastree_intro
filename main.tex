@@ -22,6 +22,9 @@
 \setbeamercolor{footline}{fg=black,bg=black}
 \usepackage{multicol}
 \colorlet{mycolor}{orange!80!black}
+\usepackage{caption}
+\captionsetup[figure]{format=plain, labelformat=empty, labelsep=none}
+\renewcommand{\figurename}{}
 %%%%
 
 %%%% 定義環境 %%%%%
@@ -47,25 +50,25 @@
 %%%%%%%%%%
 
 %%%% 擬似コードパッケージ %%%%
-\usepackage{algorithmicx}
-\usepackage[ruled]{algorithm}
-\usepackage{algpseudocode}
-\makeatletter
-\makeatother
+%\usepackage{algorithmicx}
+%\usepackage[ruled]{algorithm}
+%\usepackage{algpseudocode}
+%\makeatletter
+%\makeatother
 %%%% 条件文での改行を許す %%%%
-\newcommand\CONDITION[2]%
-	{\begin{tabular}[t]{@{}l@{}l@{}}
-			#1&#2
-		\end{tabular}%
-	}
-\algdef{SE}[IF]{If}{EndIf}[1]%
-	{\algorithmicif\ \CONDITION{#1}{\ \algorithmicthen}}%
-	{\algorithmicend\ \algorithmicif}%
-\algdef{C}[IF]{IF}{ElsIf}[1]%
-	{\algorithmicelse\ \algorithmicif\ \CONDITION{#1}{\ \algorithmicthen}}
-%%%%%%%%
-\algtext*{EndWhile}
-\algtext*{EndIf}
+%\newcommand\CONDITION[2]%
+%	{\begin{tabular}[t]{@{}l@{}l@{}}
+%			#1&#2
+%		\end{tabular}%
+%	}
+%\algdef{SE}[IF]{If}{EndIf}[1]%
+%	{\algorithmicif\ \CONDITION{#1}{\ \algorithmicthen}}%
+%	{\algorithmicend\ \algorithmicif}%
+%\algdef{C}[IF]{IF}{ElsIf}[1]%
+%	{\algorithmicelse\ \algorithmicif\ \CONDITION{#1}{\ \algorithmicthen}}
+%%%%%%%%%
+%\algtext*{EndWhile}
+%\algtext*{EndIf}
 
 %%%% ファイル環境 %%%%
 \usepackage{subfiles}
@@ -128,6 +131,7 @@
 \institute[IKN]{北海道大学工学部 情報エレクトロニクス学科 情報理工学コース 4年\\
 情報知識ネットワーク研究室}
 \date{\today}%日付
+
 \begin{document}
 
 \begin{frame}\frametitle{}
@@ -147,28 +151,31 @@
 \subfile{texfiles/introduction/introduction}
 \section{van Emde Boas tree とは}
 \subfile{texfiles/datastructure/vebtreetoha}
+\subfile{texfiles/datastructure/kokomade}
 \subfile{texfiles/datastructure/func-member}
 \subfile{texfiles/datastructure/func-minmax}
 \subfile{texfiles/datastructure/func-suc}
 \subfile{texfiles/datastructure/func-insert}
 \subfile{texfiles/datastructure/func-delete}
-\section{binary-tree}
+\section{Binary tree}
 \subfile{texfiles/binarytree/introduction}
 \subfile{texfiles/binarytree/binarytree}
+\subfile{texfiles/binarytree/func-member}
 \subfile{texfiles/binarytree/func-min}
 \subfile{texfiles/binarytree/func-suc}
-\subfile{texfiles/binarytree/func-member}
 \subfile{texfiles/binarytree/func-insert}
 \subfile{texfiles/binarytree/func-delete}
 \subfile{texfiles/binarytree/runningtime}
 \subfile{texfiles/binarytree/refined}
 \subfile{texfiles/binarytree/comp-tree}
+\subfile{texfiles/binarytree/sqrt-member}
 \subfile{texfiles/binarytree/sqrt-min}
 \subfile{texfiles/binarytree/sqrt-suc}
-\subfile{texfiles/binarytree/sqrt-member}
 \subfile{texfiles/binarytree/sqrt-insert}
 \subfile{texfiles/binarytree/sqrt-delete}
 \subfile{texfiles/binarytree/sqrt-runningtime}
 \subfile{texfiles/binarytree/matome}
+\section{Proto van Emde Boas structures}
+\section{van Emde Boas tree}
 
 \end{document}

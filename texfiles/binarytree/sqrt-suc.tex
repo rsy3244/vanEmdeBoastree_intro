@@ -2,20 +2,16 @@
 
 \begin{document}
 
-\begin{frame}\frametitle{平方分割木構造 操作$\Min(V)$, $\Max(V)$}
-\begin{columns}[c]
-\begin{column}{0.4\linewidth}\subfile{code/sqrt-suc} \end{column}
-\begin{column}{0.59\linewidth}
+\begin{frame}\frametitle{平方分割木構造 操作: {\small $\Successor(V,x)$, $\Predecessor(V,x)$}}
 \begin{itemize}
 \item {\small $\Successor(V,x)$}は, $x$の$cluster$内で$x$より左の要素を探索し,\\
 	もしなければ, $summary$で$\frac{x}{\sqrt{u}}$より右で$1$である要素を探す.\\
-	その後, $1$の値である$cluster$内の\\最小値を返す.
+	その後, $1$の値である$cluster$内の最小値を返す.
 \begin{itemize}
 	\item $\Predecessor(V,x)$も同様に処理する.
 \end{itemize}
 \end{itemize}
-\subfile{resources/sqrt-min} \end{column}
-\end{columns}
+\subfile{resources/sqrt-suc} 
 
 \end{frame}
 \end{document}

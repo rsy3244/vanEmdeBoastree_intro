@@ -4,14 +4,26 @@
 
 \begin{frame}\frametitle{前半のまとめ}
 	\begin{itemize}
-		\item 二分木構造で時間計算量$O(\log u)$を達成
+		\item vEB木を定義した.
+		\item 二分木構造で各種操作の時間計算量は下表となった.
 		\item 平方分割木によって二分木構造の木の高さを小さくしたが, \\
-			時間計算量が$O(\sqrt{u})$と悪化
+			一部操作の最悪時間計算量が$O(\sqrt{u})$と悪化\\
 			\begin{itemize}
 				\item $summary$, $cluster$の線形探索がボトルネック
 			\end{itemize}
-		\item 次回は, 線形探索を回避するために新たなデータ構造を考える
 	\end{itemize}
+	\begin{table}
+		\begin{tabular}{|c|c|c|}\hline
+			& 二分木 & 平方分割木 \\\hline
+			{\scriptsize $\Min(V)$ } 			& \structure{ $\Theta(\log u)$} 		& \alert{$O(\sqrt{u })$} \\
+			{\scriptsize $\Max(V)$ } 			& \structure{ $\Theta(\log u)$} 		& \alert{$O(\sqrt{u} )$} \\
+			{\scriptsize $\Member(V,x)$ } 		& $O(1)$ 					& $O(1)$ \\
+			{\scriptsize $\Successor(V,x)$ } 	& \structure{ $O(\log u)$} 	& \alert{$O(\sqrt{u})$} \\
+			{\scriptsize $\Predecessor(V,x)$ } 	& \structure{ $O(\log u)$}	& \alert{$O(\sqrt{u})$} \\
+			{\scriptsize $\Insert(V,x)$ } 		& \alert{$O(\log u)$}		& \structure{$O(1)$} \\
+			{\scriptsize $\Delete(V,x)$ } 		& \structure{ $O(\log u)$}	& \alert{ $O(\sqrt{u})$} \\\hline
+		\end{tabular}
+	\end{table}
 \end{frame}
 
 \end{document}

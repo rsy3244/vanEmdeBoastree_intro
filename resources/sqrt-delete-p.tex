@@ -1,7 +1,17 @@
 \documentclass[main]{subfiles}
 \begin{document}
 \begin{figure}\resizebox{.99\textwidth}{!}{
-\begin{tikzpicture}[scale=0.5]
+\begin{tikzpicture}[scale=0.5,
+	elem/.style={rectangle, fill=blue!20},
+	a0/.style={elem},
+	a1/.style={elem},
+	a2/.style={elem},
+	a3/.style={elem},
+	a8/.style={elem},
+	a9/.style={elem},
+	a10/.style={elem},
+	a11/.style={elem},
+	]
 	%\draw (0,0) grid (16,1);
 	\putarray{0,0,1,1,0,1,0,0,1,0,0,1,1,0,0,0}
 	\setcounter{Cntr}{0}
@@ -11,6 +21,10 @@
 		\addtocounter{Cntr}{1}%
 	}
 	\draw [thick] (a0.north west) rectangle (a15.south east);
+	\begin{scope}[on background layer]
+		\draw [fill=blue!10] (a0.north west) rectangle (a3.south east);
+		\draw [fill=blue!10] (a8.north west) rectangle (a11.south east);
+	\end{scope}
 	\foreach \i in {0,1,...,14} {
 		\draw (a\i.north east) to (a\i.south east);
 	}

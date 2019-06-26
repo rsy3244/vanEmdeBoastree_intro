@@ -1,15 +1,11 @@
 \documentclass[main]{subfiles}
 
 \begin{document}
-\begin{frame}\frametitle{平方分割木構造 操作$\Delete(V,x)$\uniqnum{4}}
-\begin{columns}[t]
-\begin{column}{0.45\linewidth} \subfile{code/sqrt-delete} \end{column}
-\begin{column}{0.54\linewidth} 
+\begin{frame}\frametitle{平方分割木構造 操作: $\Delete(V,x)$}
 \begin{itemize}
-\item $\Delete(V,x)$は 対応する$cluster$の要素の値を$1$にし, $cluster$の全要素が$0$ならば\\ $summary$の要素を$0$にする.
+\item $\Delete(V,x)$は 対応する$cluster$の要素の値を$0$にし, \\$cluster$の全要素が$0$ならば, $summary$の要素を$0$にする.
 \end{itemize}
-\subfile{resources/sqrt-delete} \end{column}
-\end{columns}
+\subfile{resources/sqrt-delete} 
 
 \end{frame}
 \end{document}

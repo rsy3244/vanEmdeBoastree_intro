@@ -10,6 +10,7 @@
 		\node [above =-.1 of r\the\value{Cntr}] (rdx\the\value{Cntr}) {{\tiny$\the\value{Cntr}$}};
 		\addtocounter{Cntr}{1}%
 	}
+	%%%%枠の設定%%%%
 	\draw [thick] (a0.north west) rectangle (a15.south east);
 	\begin{scope}[on background layer]
 		\draw [fill=blue!10] (a0.north west) rectangle (a3.south east);
@@ -29,11 +30,24 @@
 	\draw [thick](a4.north west) to (a4.south west);
 	\draw [thick](a8.north west) to (a8.south west);
 	\draw [thick](a12.north west) to (a12.south west);
-	\draw [red,thick] (a0.north) to [bend left=45] (a1.north);
-	\draw [->,red,thick] (a1.north) to [bend left=45] (a2.north);
+	%%%%%%%%%
+	\onslide*<1>{
+		\node[fill=red!20,rectangle] at (a5) {$1$};
+		\draw [red,thick] (a5.north) to [bend left=45] (a6.north);
+		\draw [->,red,thick] (a6.north) to [bend left=45] (a7.north);
+	}
+	\onslide*<2>{
+		\node[fill=red!20, rectangle] at (r1) {$1$};
+	}
+	\onslide*<3>{
+		\draw [->,red,thick] (r1.north) to [bend left=45] (r2.north);
+		\node[fill=red!20, rectangle] at (r2) {$1$};
+	}
+	\onslide*<4>{
+		\node[fill=red!20,rectangle] at (a8) {$1$};
+	}
 
-	\node[fill=red!20,rectangle] at (r0) {$1$};
-	\node[fill=red!20,rectangle] at (a2) {$1$};
+	
 
 \end{tikzpicture}
 }

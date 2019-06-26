@@ -3,18 +3,18 @@
 \begin{document}
 
 \begin{frame}\frametitle{直接アドレス法\uniqnum{2}}
-	空間計算量$O(u)$で動的集合を保持する手段として, \structure{直接アドレス法}を考える.\\
-\begin{minipage}[t][.4\textheight][c]{\linewidth}
+\begin{minipage}[t][.5\textheight][c]{\linewidth}
 \onslide*<1>{
+	動的集合を保持する手段として,\structure{直接アドレス法}を考える.\\
 \begin{block}{直接アドレス法}
 	要素の値を配列の添字として利用し, データを保持するテクニック
 \end{block}
-今回考えているデータ構造では付属データは持たないので, \\各配列の要素には要素を保持しているかをbitで格納する.
+今回考えているデータ構造では\\ハッシュ表のような付属データは持たないので, \\各配列の要素には要素を保持しているかをbitで格納する.
 }
 \onslide*<2->{
 	\begin{itemize}
-		\item $\Member(V,x)$, $\Insert(V,x)$, $\Delete(V,x)$ の処理は, 配列のランダムアクセスが定数時間であるので, 時間計算量\structure{$O(1)$}. \\
-		\item $\Successor(V,x)$の処理は, $x$の次の値からbitが立っている\\要素まで最悪$\Theta(u)$回探索する必要があるので, 時間計算量\alert{$O(u)$}.
+		\item $\Member(V,x)$, $\Insert(V,x)$, $\Delete(V,x)$ は, \\配列のランダムアクセスが定数時間なので, 時間計算量\structure{$O(1)$}. \\
+		\item $\Successor(V,x)$は, $x$の次の値が$1$の要素まで\\最悪$\Theta(u)$回探索する必要があるので, 時間計算量\alert{$O(u)$}.
 			\begin{itemize}
 				\item $\Predecessor(V,x)$, $\Min(V)$, $\Max(V)$も同様の処理を行うため, \\時間計算量$O(u)$.
 			\end{itemize}

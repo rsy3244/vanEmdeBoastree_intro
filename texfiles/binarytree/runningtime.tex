@@ -2,12 +2,12 @@
 
 \begin{document}
 
-\begin{frame}\frametitle{二分木構造 計算量\uniqnum{3}}
+\begin{frame}\frametitle{二分木構造 計算量\uniqnum{4}}
 	\begin{itemize}
-		\onslide*<1>{\item $\Min(V)$, $\Max(V)$ では, 根から最小値となる葉まで頂点を\\探索するので, 時間計算量は\structure{$\Theta(\log u)$}となる.}
-		\onslide*<2>{\item $\Successor(V,x)$, $\Predecessor(V,x)$では, 葉から最悪根まで辿り, \\ その後, $\Min(V)$ (または$\Max(V)$) と同様の処理を行うことから, \\ 時間計算量は\structure{$O(\log u)$}となる.}
-		\onslide*<3>{\item $\Member(V,x)$では, \\対応する葉にアクセスし, 値を取得する, \\もしくは更新するので, 時間計算量は\structure{$O(1)$}となる.}
-		\onslide*<4>{\item $\Insert(V,x)$, $\Delete(V,x)$では, \\葉から根まで辿る処理を行うので, 時間計算量は\structure{$O(\log u)$}となる.}
+		\onslide*<1>{\item $\Min(V)$, $\Max(V)$ では, 根から最小値となる葉まで頂点を\\探索するので, 時間計算量は\structure{$\Theta(\log u)$}.}
+		\onslide*<2>{\item $\Successor(V,x)$, $\Predecessor(V,x)$では, 葉から最悪根まで辿り, \\ その後, $\Min(V)$ (または$\Max(V)$) と同様の処理を行うことから, \\ 時間計算量は\structure{$O(\log u)$}.}
+		\onslide*<3>{\item $\Member(V,x)$では, 対応する葉にアクセスし, 値を取得する, \\もしくは更新するので, 時間計算量は\structure{$O(1)$}.}
+		\onslide*<4>{\item $\Insert(V,x)$, $\Delete(V,x)$では, \\葉から根まで辿る処理を行うので, 時間計算量は\structure{$O(\log u)$}.}
 	\end{itemize}
 	\onslide*<1>{\subfile{resources/bt-min-p} }
 	\onslide*<2>{\subfile{resources/bt-suc-p} }
