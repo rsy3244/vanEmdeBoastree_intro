@@ -18,7 +18,7 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamercovered{transparent=0}%好みに応じてどうぞ）
 \setbeamertemplate{footline}[page number]
-\setbeamerfont{footline}{size=\normalsize,series=\bfseries}
+\setbeamerfont{footline}{size=\footnotesize,series=\bfseries}
 \setbeamercolor{footline}{fg=black,bg=black}
 \usepackage{multicol}
 \colorlet{mycolor}{orange!80!black}
@@ -81,14 +81,6 @@
   \setbeamercolor{subsection in toc}{fg=mycolor}
   \setbeamercolor{subsubsection in toc shaded}{fg=black}
   \setbeamercolor{subsubsection in toc}{fg=mycolor}
-  \frame<beamer>{
-  \frametitle{Contents}
-  \tableofcontents[
-    sectionstyle=show/shaded,
-    subsectionstyle=show/show/shaded,
-    subsubsectionstyle=show/show/show/shaded
-    ]
- }
 }
 
 \tikzset{%
@@ -148,16 +140,39 @@
 \end{frame}
 
 \section{自己紹介}
+  \frame<beamer>{
+  \frametitle{Contents}
+  \tableofcontents[
+    sectionstyle=show/shaded,
+    subsectionstyle=show/show/shaded,
+    subsubsectionstyle=show/show/show/shaded
+    ]
+ }
 \subfile{texfiles/introduction/introduction}
 \section{van Emde Boas tree とは}
+  \frame<beamer>{
+  \frametitle{Contents}
+  \tableofcontents[
+    sectionstyle=show/shaded,
+    subsectionstyle=show/show/shaded,
+    subsubsectionstyle=show/show/show/shaded
+    ]
+ }
 \subfile{texfiles/datastructure/vebtreetoha}
-\subfile{texfiles/datastructure/kokomade}
 \subfile{texfiles/datastructure/func-member}
 \subfile{texfiles/datastructure/func-minmax}
 \subfile{texfiles/datastructure/func-suc}
 \subfile{texfiles/datastructure/func-insert}
 \subfile{texfiles/datastructure/func-delete}
 \section{Binary tree}
+  \frame<beamer>{
+  \frametitle{Contents}
+  \tableofcontents[
+    sectionstyle=show/shaded,
+    subsectionstyle=show/show/shaded,
+    subsubsectionstyle=show/show/show/shaded
+    ]
+ }
 \subfile{texfiles/binarytree/introduction}
 \subfile{texfiles/binarytree/binarytree}
 \subfile{texfiles/binarytree/func-member}
@@ -174,8 +189,8 @@
 \subfile{texfiles/binarytree/sqrt-insert}
 \subfile{texfiles/binarytree/sqrt-delete}
 \subfile{texfiles/binarytree/sqrt-runningtime}
-\subfile{texfiles/binarytree/matome}
 \section{Proto van Emde Boas structures}
 \section{van Emde Boas tree}
+\subfile{texfiles/binarytree/matome}
 
 \end{document}

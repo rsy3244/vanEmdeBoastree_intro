@@ -9,7 +9,7 @@
 \begin{block}{直接アドレス法}
 	要素の値を配列の添字として利用し, データを保持するテクニック
 \end{block}
-今回考えているデータ構造では\\ハッシュ表のような付属データは持たないので, \\各配列の要素には要素を保持しているかをbitで格納する.
+今回のデータ構造ではハッシュ表のような付属データはないので, \\各配列の要素には要素を保持しているかをbitで格納する.
 }
 \onslide*<2->{
 	\begin{itemize}
@@ -26,7 +26,7 @@
 \end{minipage}
 \onslide*<2>{
 \begin{tikzpicture}[overlay, remember picture]
-	%\node [ellipse callout,draw,callout absolute pointer=(5.5,2.4)](clo) at (3, 5) {$Successor(V,5)$のときの探索};
+	\node [ellipse callout,draw,callout absolute pointer={(5.55,2.43)}](clo) at (7.5, 3.2) {{\small $Successor(V,5)$のときの探索}};
 	\draw[->, thick, red] (4.75,2.33) to [bend right=-45] (5.25,2.33)%
 		to [bend right=-45] (5.75,2.33) to [bend right=-45] (6.25,2.33);
 \end{tikzpicture}

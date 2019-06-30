@@ -10,11 +10,11 @@
 		動的集合とは, 集合に対して後述の$\Member(V,x)$, $\Insert(V,x)$, $\Delete(V,x)$が行えるようなデータ構造
 	\end{block}
 	\begin{itemize}
-		\item 今回扱う要素は\structure{非負整数}とする\\
+		\item 今回扱う要素は\structure{非負整数}とする.\\
 		\item vEB木が保持しうる要素の集合を\structure{全体集合$U$}とし, \\
-			その大きさを\structure{$u$}とする
+			その大きさを\structure{$u$}とする.
 		\item vEB木が現在保持している集合を\structure{$V$}とし, \\
-			その大きさを\structure{$n$}とする
+			その大きさを\structure{$n$}とする.
 	\end{itemize}
 	
 }
@@ -22,13 +22,13 @@
 	van Emde Boas tree は以下の操作を行うことができる.
 	\begin{block}{操作}
 		\begin{description}[$\Predecessor(V,x)$]
-		\item[$\Member(V,x)$]		: $V$に$x$が存在するかを返す\\
-		\item[$\Min(V)$]			: $V$の要素の最小値を返す\\
-		\item[$\Max(V)$]			: $V$の要素の最大値を返す\\
-		\item[$\Successor(V,x)$]	: $V$の$x$より\tikzmark{ccenter}大きい最小の要素を返す\\
-		\item[$\Predecessor(V,x)$]	: $V$の$x$より小さい最大の要素を返す\\
-		\item[$\Insert(V,x)$]		: $V$に$x$を挿入する\\
-		\item[$\Delete(V,x)$]		: $V$から$x$を削除する\\
+		\item[$\Member(V,x)$]		: $V$に$x$が存在するかを返す.\\
+		\item[$\Min(V)$]			: $V$の要素の最小値を返す.\\
+		\item[$\Max(V)$]			: $V$の要素の最大値を返す.\\
+		\item[$\Successor(V,x)$]	: $V$の$x$より\tikzmark{ccenter}大きい最小の要素を返す.\\
+		\item[$\Predecessor(V,x)$]	: $V$の$x$より小さい最大の要素を返す.\\
+		\item[$\Insert(V,x)$]		: $V$に$x$を挿入する.\\
+		\item[$\Delete(V,x)$]		: $V$から$x$を削除する.\\
 		\end{description}
 	\end{block}
 	%\begin{block}{}
