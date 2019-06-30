@@ -1,3 +1,5 @@
+backup/
+texfiles/introduction/introduction.tex
 *.aux
 *.dvi
 .DS_Store
@@ -9,4 +11,4 @@
 *.snm
 *.synctex.gz
 *.toc
-texfiles/introduction/introduction.tex
+*.pdf
